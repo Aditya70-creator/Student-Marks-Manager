@@ -1,0 +1,684 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================================================== */
+/* ==========================================================================
+   PREMIUM SAAS THEME VARIABLES (Linear & Stripe Inspired)
+   ========================================================================== */
+:root {
+    --bg-main: #030712;           /* Deep dark obsidian base */
+    --surface-main: rgba(17, 24, 39, 0.7); /* Translucent midnight gray for cards */
+    --border-premium: rgba(255, 255, 255, 0.08); /* Ultra-thin sleek glass borders */
+    
+    --accent-glow: #4f46e5;       /* Core electric indigo */
+    --accent-secondary: #06b6d4;  /* Cyber cyan highlight */
+    --text-primary: #f9fafb;      /* Crisp off-white for ultimate readability */
+    --text-muted: #9ca3af;        /* Subtle slate gray for secondary labels */
+    
+    --radius-premium: 16px;       /* Softer, modern premium rounded corners */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding: 3rem 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================================================
+   2. LAYOUT CONTAINER & GRID
+   ========================================================================== */
+.dashboard-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Side-by-side Layout using CSS Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Form takes 1 part, Table takes 2 parts */
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Responsive adjustments for laptop/tablet screens */
+@media (max-width: 968px) {
+    .main-grid {
+        grid-template-columns: 1fr; /* Stack form on top of table on small screens */
+    }
+}
+
+/* ==========================================================================
+   3. CARD & FORM DESIGN
+   ========================================================================== */
+.form-section, .table-section {
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   4. BUTTON & SEARCH ELEMENT STYLES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    color: #ffffff;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.btn-edit {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    margin-right: 0.25rem;
+}
+
+/* Search Box Area Layout */
+.search-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+}
+
+.btn-search {
+    background-color: var(--text-main);
+    color: #ffffff;
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. TABLE DESIGN
+   ========================================================================== */
+.table-wrapper {
+    overflow-x: auto; /* Ensures table scrolls horizontally if screen is tiny */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   6. DYNAMIC UI UTILITY STATES
+   ========================================================================== */
+.alert {
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: var(--success-color);
+    border: 1px solid #a7f3d0;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: var(--error-color);
+    border: 1px solid #fca5a5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   STEP 1: AMBIENT BACKGROUND CANVAS ENGINE
+   ========================================================================== */
+.ambient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Forces the animation to stay completely behind everything else */
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 0%, #111827 0%, #030712 100%);
+}
+
+/* Base properties for the glowing structural shapes */
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px); /* Massive blur values turn hard shapes into soft ambient lights */
+    opacity: 0.4;
+    mix-blend-mode: screen;
+}
+
+/* Individual Orb Positioning, Colors, and Animation Assignment */
+.orb-1 {
+    top: -10%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+    background: var(--accent-glow);
+    animation: floatOrb1 25s infinite alternate ease-in-out;
+}
+
+.orb-2 {
+    bottom: 10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: var(--accent-secondary);
+    animation: floatOrb2 30s infinite alternate ease-in-out;
+}
+
+.orb-3 {
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: #7c3aed; /* Deep royal purple accent */
+    animation: floatOrb1 20s infinite alternate-reverse ease-in-out;
+}
+
+/* Subtly textured grid overlay overlay for that high-tech Linear SaaS look */
+.glass-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ==========================================================================
+   MATHEMATICAL TRANSFORMATION PATHS (Hardware-Accelerated)
+   ========================================================================== */
+@keyframes floatOrb1 {
+    0% { transform: translate(0px, 0px) scale(1); }
+    50% { transform: translate(60px, 40px) scale(1.15); }
+    100% { transform: translate(-40px, 80px) scale(0.9); }
+}
+
+@keyframes floatOrb2 {
+    0% { transform: translate(0px, 0px) scale(1.1); }
+    50% { transform: translate(-80px, -60px) scale(0.85); }
+    100% { transform: translate(50px, 30px) scale(1); }
+}
+
+/* ==========================================================================
+   STEP 2: PREMIUM SAAS HERO SECTION STYLING
+   ========================================================================== */
+.saas-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    animation: heroFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Glowing Top Status Badge Layout */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.4rem 1.1rem;
+    border-radius: 100px;
+    margin-bottom: 1.75rem;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated Pulse Radar Indicator */
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-secondary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.badge-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: var(--accent-secondary);
+    animation: pulseRadar 2s infinite ease-out;
+}
+
+.badge-text {
+    font-size: 0.725rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+/* High-End Condensed Typography */
+.hero-title {
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* Linear-Inspired Gradient Overlay Mask */
+.gradient-text {
+    background: linear-gradient(90deg, #ffffff 0%, #a78bfa 45%, var(--accent-glow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    max-width: 680px;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+/* ==========================================================================
+   HARDWARE-ACCELERATED HERO KEYFRAMES
+   ========================================================================== */
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseRadar {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+/* Mobile Responsive Scale Overrides */
+@media (max-width: 768px) {
+    .saas-hero { margin-bottom: 2.5rem; }
+    .hero-title { font-size: 2.25rem; letter-spacing: -0.02em; }
+    .hero-subtitle { font-size: 1rem; }
+}
+
+/* ==========================================================================
+   STEP 3: GLASSMORPHISM CARD SKINS & FORM ELEMENTS
+   ========================================================================== */
+/* Upgrading the main content container panels into Frosted Glass wrappers */
+.form-section, .table-section {
+    background: rgba(17, 24, 39, 0.45) !important; /* Semi-transparent midnight core */
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);     /* Frosted optical glass filter blur */
+    border: 1px solid var(--border-premium) !important; /* Ultra-crisp pixel boundary accent line */
+    border-radius: var(--radius-premium) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4) !important; /* Deep ambient soft drop shadow */
+    padding: 2.25rem !important;
+}
+
+/* Enhancing input fields to look like high-end developer terminals */
+.form-group input, .search-box input {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    color: var(--text-primary) !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* High-tech glow accent highlight upon active field focus interaction states */
+.form-group input:focus, .search-box input:focus {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: var(--accent-secondary) !important;
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* ==========================================================================
+   TABLE MODERNIZATION ENGINE
+   ========================================================================== */
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 0.5rem !important; /* Employs professional separated structural rows spacing */
+}
+
+th {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: var(--text-muted) !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    padding: 1rem !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Make body rows look like individual floating structural ribbons */
+tbody tr {
+    background: rgba(255, 255, 255, 0.01) !important;
+    transition: all 0.25s ease !important;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+    transform: scale(1.005) translateY(-1px);
+}
+
+td {
+    padding: 1.1rem 1rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.02) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+    color: #e5e7eb !important;
+}
+
+/* Rounding corners on row boundaries to sustain component modularity profiles */
+td:first-child { border-left: 1px solid rgba(255, 255, 255, 0.02) !important; border-radius: 10px 0 0 10px !important; }
+td:last-child { border-right: 1px solid rgba(255, 255, 255, 0.02) !important; border-radius: 0 10px 10px 0 !important; }
+
+/* ==========================================================================
+   METRIC STATUS GRADE BADGES
+   ========================================================================== */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 6px;
+    background: rgba(79, 70, 229, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+/* ==========================================================================
+   STEP 4: DASHBOARD METRICS CARDS STYLE
+   ========================================================================== */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divides available width into three even columns */
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; /* Slight entry delay for visual layering */
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.02);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.5rem;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.metric-label {
+    font-size: 0.775rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+/* Micro Neon Accents for Card Badge Emblems */
+.metric-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.icon-blue { background: rgba(79, 70, 229, 0.15); border: 1px solid rgba(79, 70, 229, 0.2); }
+.icon-cyan { background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.2); }
+.icon-purple { background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.2); }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr; /* Stacks the three metrics vertically on tablets or mobile devices */
+        gap: 1rem;
+    }
+}
+
+/* ==========================================================================
+   STEP 5: ADVANCED TACTILE BUTTONS & HOVER ENGINES
+   ========================================================================== */
+/* Master Base button overrides */
+.btn {
+    text-transform: uppercase;
+    font-size: 0.825rem !important;
+    letter-spacing: 0.04em;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    padding: 0.8rem 1.5rem !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important; /* Smooth physical easing */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Micro physical physics click simulation state */
+.btn:active {
+    transform: scale(0.97) !important; /* Compresses slightly downward when physically clicked */
+}
+
+/* 1. Primary Action Button: Save Record (Electric Indigo Neon Glow) */
+.btn-primary {
+    background: linear-gradient(180deg, #5a52ff 0%, #4f46e5 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.2) !important; /* Inner highlight rim */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(180deg, #6c65ff 0%, #5a52ff 100%) !important;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4), 
+                0 0 0 2px rgba(90, 82, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+
+/* 2. Search CTA Button: (Crisp Dark Obsidian Slate) */
+.btn-search {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    padding: 0 1.5rem !important;
+}
+
+.btn-search:hover {
+    background: #334155 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+
+/* 3. Grid Row Action: Edit Button (Translucent Cyan Velvet) */
+.btn-edit {
+    background: rgba(6, 182, 212, 0.1) !important;
+    color: #22d3ee !important;
+    border: 1px solid rgba(6, 182, 212, 0.2) !important;
+    -webkit-backdrop-filter: blur(4px); /* Safari/iOS support */
+    backdrop-filter: blur(4px);
+}
+
+.btn-edit:hover {
+    background: var(--accent-secondary) !important;
+    color: #030712 !important; /* Inverts text color on fill for contrast */
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+/* 4. Grid Row Action: Delete Button (Translucent Crimson Velvet) */
+.btn-danger {
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    -webkit-backdrop-filter: blur(4px); /* Safari/iOS support */
+    backdrop-filter: blur(4px);
+}
+
+.btn-danger:hover {
+    background: var(--error-color) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+/* 5. Cancel / Reset Action Button: (Subtle Translucent Gray) */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: var(--text-muted) !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-primary) !important;
+    transform: translateY(-1px);
+}
