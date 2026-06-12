@@ -1,5 +1,15 @@
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\controller\AcademicController.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\controller\AuthController.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\controller\ExtensionController.java
 C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\controller\StudentController.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\model\Semester.java
 C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\model\Student.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\model\Subject.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\model\User.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\repository\SemesterRepository.java
 C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\repository\StudentRepository.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\repository\UserRepository.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\service\AcademicService.java
+C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\service\AuthService.java
 C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\service\StudentService.java
 C:\Users\KIIT\Desktop\student-marks-management-system\backend\src\main\java\com\studentmanagement\StudentManagementApplication.java

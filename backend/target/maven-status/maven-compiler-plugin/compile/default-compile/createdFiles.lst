@@ -1,5 +1,16 @@
-com\studentmanagement\repository\StudentRepository.class
 com\studentmanagement\model\Student.class
+com\studentmanagement\service\AcademicService.class
+com\studentmanagement\controller\ExtensionController.class
 com\studentmanagement\StudentManagementApplication.class
+com\studentmanagement\repository\SemesterRepository.class
+com\studentmanagement\model\Semester.class
+com\studentmanagement\model\User.class
+com\studentmanagement\controller\AuthController.class
+com\studentmanagement\repository\StudentRepository.class
+com\studentmanagement\repository\UserRepository.class
+com\studentmanagement\controller\AuthController$LoginRequest.class
+com\studentmanagement\controller\AcademicController.class
 com\studentmanagement\controller\StudentController.class
+com\studentmanagement\model\Subject.class
 com\studentmanagement\service\StudentService.class
+com\studentmanagement\service\AuthService.class
