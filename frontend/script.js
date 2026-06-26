@@ -1,3 +1,9 @@
+// Session Validation Guard for Student Marks Dashboard
+const authUserId = localStorage.getItem('tracker_user_id');
+if (!authUserId) {
+    // Agar login session token nahi hai, to redirect to index.html (Login Page)
+    window.location.href = 'index.html';
+}
 // ==========================================================================
 // 1. GLOBAL BASE CONFIGURATIONS
 // ==========================================================================

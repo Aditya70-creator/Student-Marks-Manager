@@ -9,7 +9,7 @@ const currentUsername = localStorage.getItem('tracker_user_name');
 
 if (!currentUserId) {
     // If identity token is blank, redirect user immediately to the auth gate
-    window.location.href = 'auth.html';
+    window.location.href = 'index.html';
 }
 
 // Element Bindings Registry
@@ -211,7 +211,7 @@ function renderHistoryCards(semesters) {
 function executeSystemLogout() {
     localStorage.removeItem('tracker_user_id');
     localStorage.removeItem('tracker_user_name');
-    window.location.href = 'auth.html';
+    window.location.href = 'index.html';
 }
 
 function showToast(message, type) {
