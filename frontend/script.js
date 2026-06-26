@@ -2,8 +2,7 @@
 // 1. GLOBAL BASE CONFIGURATIONS
 // ==========================================================================
 // The exact REST API endpoint address where our Java Controller is listening
-const API_BASE_URL = 'http://localhost:8080/api/students';
-
+const API_BASE_URL = 'https://student-marks-manager-uch5.onrender.com/api/students';
 // DOM Element Registry (Grabbing all HTML nodes we need to interact with)
 const studentForm = document.getElementById('student-form');
 const studentIdInput = document.getElementById('student-id');

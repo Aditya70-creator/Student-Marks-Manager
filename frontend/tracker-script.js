@@ -1,7 +1,7 @@
 // ==========================================================================
 // 1. GLOBAL BASE CONFIGURATIONS & RUNTIME VERIFICATION
 // ==========================================================================
-const API_ACADEMIC_URL = 'http://localhost:8080/api/academic';
+const API_ACADEMIC_URL = 'https://student-marks-manager-uch5.onrender.com/api/academic';
 
 // Session Validation: Verify user profile context exists in local storage
 const currentUserId = localStorage.getItem('tracker_user_id');
