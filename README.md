@@ -1,6 +1,13 @@
 # 🎓 Academic Performance Tracker
 
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20On%20Render-brightgreen?style=for-the-badge&logo=render)](https://student-marks-manager-1.onrender.com)
+
+[![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+
 A full-stack academic performance management platform built using Spring Boot, MongoDB, HTML, CSS, and JavaScript.
+
+> **🌐 Live Project URL:** [student-marks-manager-1.onrender.com](https://student-marks-manager-1.onrender.com)  
+> *(💡 Note: Hosted on a Render Free Tier server. If the website takes 30-40 seconds to open initially, please be patient as the server is spinning up from hibernation. It runs perfectly smooth once loaded!)*
 
 This application allows students to securely create an account, manage semester-wise academic records, calculate SGPA and CGPA automatically, and track their complete academic journey through an interactive dashboard.
 
@@ -35,7 +42,7 @@ This application allows students to securely create an account, manage semester-
 - Monitor academic growth throughout the degree
 
 ### 🗄 Database Integration
-- MongoDB Database
+- MongoDB Atlas(Cloud)
 - Persistent Academic Records
 - User-wise Data Separation
 - Repository Pattern Architecture
@@ -55,7 +62,7 @@ This application allows students to securely create an account, manage semester-
 - Maven
 
 ### Database
-- MongoDB
+- MongoDB Atlas(Cloud)
 
 ### Version Control
 - Git
@@ -181,6 +188,4 @@ Through this project, I gained hands-on experience in:
 
 Aditya Mitra
 
-B.Tech Computer Science Engineering Student
-
-Interested in Software Development, Cybersecurity, AI, and Full Stack Engineering.
+Interested in Software Development, Backend Development, AI, and open source.
