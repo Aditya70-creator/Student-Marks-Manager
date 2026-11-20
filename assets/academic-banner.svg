@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0a1124" />
+      <stop offset="100%" stop-color="#06202a" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="320" rx="18" fill="url(#bg)" />
+  <rect width="1200" height="320" rx="18" fill="url(#grid)" opacity="0.5" />
+  <rect x="2" y="2" width="1196" height="316" rx="16" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.4" />
+
+  <rect x="0" y="45" width="6" height="230" rx="3" fill="url(#accent)" />
+
+  <circle cx="980" cy="90" r="90" fill="#10b981" opacity="0.06">
+    <animate attributeName="r" values="80;105;80" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1060" cy="220" r="75" fill="#38bdf8" opacity="0.06">
+    <animate attributeName="r" values="65;90;65" dur="6s" repeatCount="indefinite" />
+  </circle>
+
+  <rect x="55" y="42" width="385" height="30" rx="15" fill="#0f172a" stroke="#10b981" stroke-width="1.2" />
+  <circle cx="74" cy="57" r="5" fill="#10b981">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="90" y="61" fill="#34d399" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="bold" letter-spacing="1.2">FULL-STACK ACADEMIC INTELLIGENCE PLATFORM</text>
+
+  <text x="55" y="132" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="bold">Academic Tracker</text>
+  <text x="55" y="172" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="bold">Automated SGPA / CGPA Engine  |  Semester Analytics  |  Cloud Persistence</text>
+  <text x="55" y="210" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="15">Spring Boot REST API  |  MongoDB Atlas Cloud  |  Responsive Vanilla JS Dashboard</text>
+
+  <rect x="55" y="238" width="165" height="34" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.2" />
+  <circle cx="73" cy="255" r="4" fill="#10b981" />
+  <text x="86" y="259" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">Java Spring Boot</text>
+
+  <rect x="235" y="238" width="165" height="34" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+  <circle cx="253" cy="255" r="4" fill="#38bdf8" />
+  <text x="266" y="259" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">MongoDB Atlas</text>
+
+  <rect x="415" y="238" width="175" height="34" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.2" />
+  <circle cx="433" cy="255" r="4" fill="#818cf8" />
+  <text x="446" y="259" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold">SGPA / CGPA Engine</text>
+
+  <rect x="780" y="45" width="365" height="230" rx="14" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.5" />
+  <text x="805" y="78" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="bold" letter-spacing="0.8">LIVE GPA TELEMETRY SNAPSHOT</text>
+  <line x1="805" y1="90" x2="1120" y2="90" stroke="#334155" stroke-width="1" />
+
+  <text x="805" y="122" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Cumulative GPA (CGPA)</text>
+  <text x="1120" y="122" text-anchor="end" fill="#34d399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">9.24 / 10.0</text>
+  <rect x="805" y="132" width="315" height="8" rx="4" fill="#090d16" />
+  <rect x="805" y="132" width="290" height="8" rx="4" fill="url(#accent)" />
+
+  <text x="805" y="170" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Credits Verified</text>
+  <text x="1120" y="170" text-anchor="end" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold">142 Credits</text>
+  <rect x="805" y="180" width="315" height="8" rx="4" fill="#090d16" />
+  <rect x="805" y="180" width="255" height="8" rx="4" fill="#38bdf8" />
+
+  <rect x="805" y="212" width="315" height="42" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+  <circle cx="825" cy="233" r="5" fill="#10b981" />
+  <text x="840" y="237" fill="#cbd5e1" font-family="Consolas, Courier New, monospace" font-size="12" font-weight="bold">MONGODB_ATLAS: SYNCED_OK</text>
+</svg>
